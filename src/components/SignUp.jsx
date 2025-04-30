@@ -12,7 +12,7 @@ const SignUp = ({ toggleForm }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(username, email, password, confirmPassword);
+        // console.log(username, email, password, confirmPassword);
 
         // validation
         if (password.length < 8) {

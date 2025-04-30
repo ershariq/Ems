@@ -12,6 +12,11 @@ const Login = ({ toggleForm, onLogin }) => {
     const submitHandler = (e) => {
         e.preventDefault();
 
+        if (username === "admin" && password === "Admin@123") {
+            onLogin("admin");
+            navigate("/admin");
+        }
+
         // Get saved user from localStorage
         const savedUser = JSON.parse(localStorage.getItem("user"));
 
@@ -31,24 +36,13 @@ const Login = ({ toggleForm, onLogin }) => {
             return;
         }
 
-        // const validUsername = "admin";
-        // const validPassword = "Admin@123";
-
-        // if (username !== validUsername || password !== validPassword) {
-        //     setError("Invalid username or password");
-        //     return;
-        // }
-
         setError('');
         setUsername('');
         setPassword('');
 
-        if (username && password) {
-            onLogin();
-            navigate('/');
-        }
-    }
-
+        onLogin("employee");
+        navigate('/');
+    };
 
 
     return (
@@ -102,7 +96,8 @@ const Login = ({ toggleForm, onLogin }) => {
             </div>
         </div>
     );
-};
+
+}
 
 export default Login;
 
