@@ -1,0 +1,5 @@
+<script>
+    // Redirect to index.html while preserving the path
+    const redirectTo = '/ems' + location.pathname.replace('/ems', '') + location.search + location.hash;
+    location.replace(redirectTo);
+  </script>
