@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import ProjectContext from './context/ProjectContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/ems">
     <ProjectContext>
       <App />
     </ProjectContext>
