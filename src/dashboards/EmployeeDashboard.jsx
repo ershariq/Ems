@@ -22,7 +22,7 @@ const EmployeeDashboard = ({ onLogout }) => {
             {/* <span>🔔</span>
             <span>⚙️</span>
             <span>🎯 Username</span> */}
-            <span onClick={onLogout} className='absolute top-4 right-4 bg-red-500 text-white px-3 py-2 rounded cursor-pointer hover:bg-red-700 text-sm font-semibold'>Logout</span>
+            <span onClick={onLogout} className='absolute top-8 right-6 bg-red-500 text-white px-3 py-2 rounded cursor-pointer hover:bg-red-700 text-sm font-semibold'>Logout</span>
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 
-const AdminDashboard = ({ onLogout }) => {
+const AdminDashboard = ({onLogout}) => {
     const [task, setTask] = useState({
         emp_name: "",
         task_name: "",
@@ -63,7 +63,7 @@ const AdminDashboard = ({ onLogout }) => {
       }, [assignedTasks]);
 
     //   for Sidebar 
-      const admin = (localStorage.getItem("role"));
+      const admin = localStorage.getItem("role");
 
     return (
         <div className="flex bg-gray-100 min-h-screen">
@@ -71,7 +71,7 @@ const AdminDashboard = ({ onLogout }) => {
 
             <main className="flex-1 p-6 space-y-6">
                 <h1 className="text-2xl font-semibold mb-4">Employee Overview</h1>
-
+                  <span onClick={onLogout} className='absolute top-0 right-6 bg-red-500 text-white px-3 py-2 rounded cursor-pointer hover:bg-red-700 text-sm font-semibold'>Logout</span>
                 {/* Table Section */}
                 <div className="overflow-x-auto bg-white shadow-md rounded-lg">
                     <table className="min-w-full text-sm text-left">

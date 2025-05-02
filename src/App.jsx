@@ -4,7 +4,7 @@ import AuthForm from './components/AuthForm';
 import EmployeeDashboard from './dashboards/EmployeeDashboard';
 import AdminDashboard from './dashboards/AdminDashboard';
 
-function App({children}) {
+function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState('');
 
